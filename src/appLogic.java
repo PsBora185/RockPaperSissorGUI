@@ -10,15 +10,15 @@ public class appLogic {
     private int compScore , playerScore;
 
     public String getCompChoice() {
-        return compChoice;
+        return this.compChoice;
     }
 
     public int getCompScore() {
-        return compScore;
+        return this.compScore;
     }
 
     public int getPlayerScore() {
-        return playerScore;
+        return this.playerScore;
     }
 
     private Random random;
@@ -37,24 +37,30 @@ public class appLogic {
         if (compChoice.equals("Rock")) {
             if (playerChoice.equals("Paper")) {
                 result = "You Win !!";
+                playerScore++;
             } else if (playerChoice.equals("Scissor")) {
                 result = "You Lose !!";
+                compScore++;
             } else {
                 result = "Draw !!";
             }
         }else if (compChoice.equals("Paper")) {
             if (playerChoice.equals("Scissor")) {
                 result = "You Win !!";
+                playerScore++;
             } else if (playerChoice.equals("Rock")) {
                 result = "You Lose !!";
+                compScore++;
             } else {
                 result = "Draw !!";
             }
         }else {
             if (playerChoice.equals("Rock")) {
                 result = "You Win !!";
+                playerScore++;
             } else if (playerChoice.equals("Paper")) {
                 result = "You Lose !!";
+                compScore++;
             } else {
                 result = "Draw !!";
             }
